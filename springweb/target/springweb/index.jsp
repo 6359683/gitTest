@@ -8,4 +8,3 @@ test
 <%
 out.print(Test.getInfo());
 %>
-术ll
