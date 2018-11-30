@@ -1,0 +1,53 @@
+<settings>
+
+	<localRepository>d:\java\repository</localRepository>
+    <mirrors>
+		<mirror>  
+			<id>nexus-aliyun</id>  
+			<mirrorOf>central</mirrorOf>    
+			<name>Nexus aliyun</name>  
+			<url>http://10.10.133.169:8081/repository/maven-public/</url>  
+		</mirror>
+         
+		
+    </mirrors>  
+    <profiles>
+		 <profile>  
+			<id>jdk-1.8</id>  
+			<activation>  
+				<activeByDefault>true</activeByDefault>  
+				<jdk>1.8</jdk>  
+				</activation>  
+			<properties>  
+				<maven.compiler.source>1.8</maven.compiler.source>  
+				<maven.compiler.target>1.8</maven.compiler.target>  
+				<maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>  
+			</properties>  
+		</profile>
+        <profile>
+            <id>home</id>
+            <repositories>
+                <repository>
+                    <id>sily-nexus</id>
+                    <url>http://10.10.133.169:8081/repository/maven-public/</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
+   <activeProfiles>
+        <activeProfile>home</activeProfile>
+    </activeProfiles>
+    <servers>
+        <server>
+            <id>hljk</id>
+            <username>hljk</username>
+            <password>hljk123</password>
+        </server>
+    </servers>
+</settings>
